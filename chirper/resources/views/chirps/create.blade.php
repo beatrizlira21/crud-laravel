@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title='Cadastrar Pessoas'>
 <div class="container container-sm m-5">
       <form method="POST" action="/cadastrar-pessoa">
         @csrf
@@ -20,7 +20,7 @@
           <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
         </div>
         </form>
-    <h3>Lista de Clientes</h3>
+    <h3>Lista de Pessoas</h3>
     <div class="content table table-striped">
       <table class="table">
         <thead>
@@ -31,6 +31,15 @@
             <th>TELEFONE</th>
           </tr>
         </thead>
+        print_r($pessoas);
+          <!--@foreach($pessoas as $pessoa)
+          <tr>
+          <td>{{$pessoa->id}}<td/>
+          <td>{{$pessoa->nome}}</td>
+          <td>{{$pessoa->email}}</td>
+          <td>{{$pessoa->endereco}}</td>
+          </tr>
+          @endforeach-->
       </table>
     </div>
   </div>

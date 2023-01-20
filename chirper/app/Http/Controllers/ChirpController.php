@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chirp;
 use App\Models\Laravelcrud;
 use Illuminate\Http\Request;
 
@@ -15,7 +14,9 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        return view('chirps.index');
+        $pessoas = DB::table('Laravelcrud')->get();        
+        return view('chirps.create', ['pessoas'=>$pessoas]);
+
     }
 
     /**
@@ -41,6 +42,8 @@ class ChirpController extends Controller
         $pessoa->email = $request->email;
         $pessoa->endereco = $request->endereco;
         $pessoa->save();
+
+        return redirect('/cadastrar-pessoa');
     }
 
     /**

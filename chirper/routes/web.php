@@ -14,13 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ChirpController::class, 'index']);
 
 Route::get('/cadastrar-pessoa', [ChirpController::class, 'create']);
 
 Route::post('/cadastrar-pessoa', [ChirpController::class, 'store']);
+
 
 
 

@@ -31,15 +31,16 @@
             <th>TELEFONE</th>
           </tr>
         </thead>
-        print_r($pessoas);
-          <!--@foreach($pessoas as $pessoa)
-          <tr>
-          <td>{{$pessoa->id}}<td/>
-          <td>{{$pessoa->nome}}</td>
-          <td>{{$pessoa->email}}</td>
-          <td>{{$pessoa->endereco}}</td>
+        <tbody>
+        @foreach ($pessoaslist as $list)
+          <tr>          
+            <td>{{$list->id}}</td>
+            <td>{{$list->nome}}</td>
+            <td>{{$list->email}}</td>
+            <td>{{$list->endereco}}</td>          
           </tr>
-          @endforeach-->
+          @endforeach 
+        </tbody>
       </table>
     </div>
   </div>

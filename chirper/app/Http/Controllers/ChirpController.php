@@ -14,8 +14,8 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        $pessoas = DB::table('Laravelcrud')->get();        
-        return view('chirps.create', ['pessoas'=>$pessoas]);
+        $pessoaslist = Laravelcrud::get();        
+        return view('chirps.create', compact('pessoaslist'));
 
     }
 
@@ -42,6 +42,7 @@ class ChirpController extends Controller
         $pessoa->email = $request->email;
         $pessoa->endereco = $request->endereco;
         $pessoa->save();
+
 
         return redirect('/cadastrar-pessoa');
     }

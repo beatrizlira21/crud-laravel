@@ -14,8 +14,8 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        $pessoaslist = Laravelcrud::get();        
-        return view('chirps.create', compact('pessoaslist'));
+        $pessoas = Laravelcrud::get();        
+        return view('chirps.create', compact('pessoas'));
 
     }
 
@@ -26,7 +26,7 @@ class ChirpController extends Controller
      */
     public function create()
     {
-        return view('chirps.create');
+        // return view('chirp.create')
     }
 
     /**

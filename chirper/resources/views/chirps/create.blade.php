@@ -32,7 +32,7 @@
           </tr>
         </thead>
         <tbody>
-        @foreach ($pessoaslist as $list)
+        @foreach ($pessoas as $list)
           <tr>          
             <td>{{$list->id}}</td>
             <td>{{$list->nome}}</td>

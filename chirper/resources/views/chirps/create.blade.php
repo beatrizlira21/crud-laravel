@@ -1,6 +1,6 @@
 <x-layout title='Cadastrar Pessoas'>
 <div class="container container-sm m-5">
-      <form method="POST" action="/cadastrar-pessoa">
+      <form method="POST" action="{{route('pessoa.store')}}">
         @csrf
         <h1>Usuário</h1>
         <div class="w-50 p-2">
@@ -29,6 +29,7 @@
             <th>NOME</th>
             <th>EMAIL</th>
             <th>TELEFONE</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -37,7 +38,10 @@
             <td>{{$list->id}}</td>
             <td>{{$list->nome}}</td>
             <td>{{$list->email}}</td>
-            <td>{{$list->endereco}}</td>          
+            <td>{{$list->endereco}}</td>
+            <td><a href=""><span class="material-symbols-outlined">delete</span></a></td>
+            <td><a href=""><span class="material-symbols-outlined">edit</span></a>
+                      
           </tr>
           @endforeach 
         </tbody>

@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/cadastrar-pessoa', [ChirpController::class, 'index']);
+/*Route::get('/cadastrar-pessoa', [ChirpController::class, 'index']);
 Route::post('/cadastrar-pessoa', [ChirpController::class, 'create']);
-Route::post('/cadastrar-pessoa', [ChirpController::class, 'store']);
+Route::post('/cadastrar-pessoa', [ChirpController::class, 'store']);*/
+
+Route::resource('pessoa', ChirpController::class);
+
 
 
 

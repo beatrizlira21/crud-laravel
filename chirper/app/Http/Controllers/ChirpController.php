@@ -26,7 +26,7 @@ class ChirpController extends Controller
      */
     public function create()
     {
-        // return view('chirp.create')
+        return view('chirp.create'); 
     }
 
     /**
@@ -44,7 +44,7 @@ class ChirpController extends Controller
         $pessoa->save();
 
 
-        return redirect('/cadastrar-pessoa');
+        return redirect('/pessoa');
     }
 
     /**

@@ -40,7 +40,7 @@
             <td>{{$list->email}}</td>
             <td>{{$list->endereco}}</td>
             <td><a href=""><span class="material-symbols-outlined">delete</span></a></td>
-            <td><a href=""><span class="material-symbols-outlined">edit</span></a>
+            <td><a href="{{ route('pessoa.edit', $list->id) }}"><span class="material-symbols-outlined">edit</span></a>
                       
           </tr>
           @endforeach 

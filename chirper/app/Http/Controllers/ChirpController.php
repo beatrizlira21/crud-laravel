@@ -64,9 +64,9 @@ class ChirpController extends Controller
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chirp $chirp)
+    public function edit(Laravelcrud $pessoas)
     {
-        //
+        return view('chirps.edit', compact('pessoas'));
     }
 
     /**

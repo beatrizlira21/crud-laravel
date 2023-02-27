@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Laravelcrud extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nome',
+        'email',
+        'endereco',
+    ];
 }

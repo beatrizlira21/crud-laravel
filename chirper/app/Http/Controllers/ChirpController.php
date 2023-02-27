@@ -26,7 +26,7 @@ class ChirpController extends Controller
      */
     public function create()
     {
-        return view('chirp.create'); 
+        return view('chirps.create'); 
     }
 
     /**
@@ -64,9 +64,9 @@ class ChirpController extends Controller
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
      */
-    public function edit(Laravelcrud $pessoas)
+    public function edit(Laravelcrud $pessoa)
     {
-        return view('chirps.edit', compact('pessoas'));
+        return view('chirps.edit')->with('pessoa', $pessoa);
     }
 
     /**
@@ -76,9 +76,12 @@ class ChirpController extends Controller
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chirp $chirp)
+    public function update(Request $request, Laravelcrud $pessoa)
     {
-        //
+        $pessoa->fill($request->all())->save();
+
+        return redirect()->route('pessoa.index');
+
     }
 
     /**
